@@ -1,4 +1,4 @@
-#include<iostream>
+ï»¿#include<iostream>
 using namespace std;
 
 #define tab "\t"
@@ -14,7 +14,7 @@ void main()
 		}
 		cout << endl;
 		/*int number_of_shifts;
-		cout << "Ââåäèòå êîëè÷åñòâî ñäâèãîâ âëåâî: "; cin >> number_of_shifts;
+		cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ ÐºÐ¾Ð»Ð¸Ñ‡ÐµÑÑ‚Ð²Ð¾ ÑÐ´Ð²Ð¸Ð³Ð¾Ð² Ð²Ð»ÐµÐ²Ð¾: "; cin >> number_of_shifts;
 		for (int  i = 0; i < number_of_shifts; i++)
 		{
 			int buffer = arr[0];
@@ -26,7 +26,7 @@ void main()
 		}*/
 
 		int number_of_shifts;
-		cout << "Ââåäèòå êîëè÷åñòâî ñäâèãîâ âïðàâî: "; cin >> number_of_shifts;
+		cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ ÐºÐ¾Ð»Ð¸Ñ‡ÐµÑÑ‚Ð²Ð¾ ÑÐ´Ð²Ð¸Ð³Ð¾Ð² Ð²Ð¿Ñ€Ð°Ð²Ð¾: "; cin >> number_of_shifts;
 		for (int i = 0; i < number_of_shifts; i++)
 		{
 			int buffer = arr[n-1];
