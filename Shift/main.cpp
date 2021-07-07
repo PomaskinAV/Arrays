@@ -13,8 +13,11 @@ void main()
 			cout << arr[i] << tab;
 		}
 		cout << endl;
-		/*int number_of_shifts;
+		int number_of_shifts;
 		cout << "Введите количество сдвигов влево: "; cin >> number_of_shifts;
+		char direction; // Направление сдвига
+		cout << "Выберите направление (l-left, r-right): "; cin >> direction;
+		if (direction == 'r')number_of_shifts = n - number_of_shifts;
 		for (int  i = 0; i < number_of_shifts; i++)
 		{
 			int buffer = arr[0];
@@ -23,9 +26,9 @@ void main()
 				arr[i] = arr[i + 1];
 			}
 			arr[n - 1] = buffer;
-		}*/
+		}
 
-		int number_of_shifts;
+		/*int number_of_shifts;
 		cout << "Введите количество сдвигов вправо: "; cin >> number_of_shifts;
 		for (int i = 0; i < number_of_shifts; i++)
 		{
@@ -35,7 +38,7 @@ void main()
 				arr[i] = arr[i-1];
 			}
 			arr[0] = buffer;
-		}
+		}*/
 
 		for (int i = 0; i < n; i++)
 		{
