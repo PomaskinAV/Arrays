@@ -32,11 +32,11 @@ void main()
 #endif // BINARY
 
 #ifdef HEXADECIMAL
-	int decimal; // Десятичное число введенное с клавиатуры
+	unsigned long long int decimal; // Десятичное число введенное с клавиатуры
 	cout << "Введите десятичное число: "; cin >> decimal;
-	const int n = 16;
-	int hex[n] = {};
-	int i = 0;
+	const int n = 8;
+	int hex[n] = {}; // Этот массив будет хранить разряды шестнадцатиричного числа
+	int i = 0; //Счетчик разрядов
 	/*while (decimal)
 	{
 		hex[i] = decimal % 16;
@@ -46,7 +46,7 @@ void main()
 	for (; decimal; decimal /= 16, i++) hex[i] = decimal % 16;
 	for (i--; i >= 0; i--)
 	{
-		switch (hex[i])
+		/*switch (hex[i])
 		{
 		case (10): cout << "A"; break;
 		case (11): cout << "B"; break;
@@ -55,7 +55,10 @@ void main()
 		case (14): cout << "E"; break;
 		case (15): cout << "F"; break;
 		default: cout << hex[i];
-		}
+		}*/
+		/*if (hex[i] < 10)cout << hex[i];
+		else cout << char(hex[i] + 55);*/
+		cout << char(hex[i] + (hex[i] < 10 ? 48 : 55));
 	}
 	cout << endl;
 #endif // HEXADECIMAL
