@@ -4,7 +4,7 @@ using namespace std;
 //#define RANDOM_UNIQUE1
 //#define RANDOM_UNIQUE2
 //#define RANDOM_UNIQUE3
-#define RANDOM_UNIQUE4
+//#define RANDOM_UNIQUE4
 
 void main()
 {
