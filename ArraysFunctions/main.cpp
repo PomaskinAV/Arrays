@@ -1,4 +1,4 @@
-#include<iostream>
+п»ї#include<iostream>
 using namespace std;
 
 void FillRand(int arr[], const int n);
@@ -77,7 +77,7 @@ void Sum(int arr[], const int n)
 	{
 		summ += arr[i];
 	}
-	cout << "Сумма всех элементов в массиве: " << summ << endl;
+	cout << "РЎСѓРјРјР° РІСЃРµС… СЌР»РµРјРµРЅС‚РѕРІ РІ РјР°СЃСЃРёРІРµ: " << summ << endl;
 }
 void Avg(int arr[], const int n)
 {
@@ -86,7 +86,7 @@ void Avg(int arr[], const int n)
 	{
 		summ += arr[i];
 	}
-	cout << "Cреднее арифметическое значение элементов в массиве: " << summ / n << endl;
+	cout << "CСЂРµРґРЅРµРµ Р°СЂРёС„РјРµС‚РёС‡РµСЃРєРѕРµ Р·РЅР°С‡РµРЅРёРµ СЌР»РµРјРµРЅС‚РѕРІ РІ РјР°СЃСЃРёРІРµ: " << summ / n << endl;
 }
 void MinMax(int arr[], const int n)
 {
@@ -97,15 +97,15 @@ void MinMax(int arr[], const int n)
 		if (arr[i] < min) min = arr[i];
 		if (arr[i] > max) max = arr[i];
 	}
-	cout << "Минимальное значение в массиве: " << min << endl;
-	cout << "Максимальное значение в массиве: " << max << endl;
+	cout << "РњРёРЅРёРјР°Р»СЊРЅРѕРµ Р·РЅР°С‡РµРЅРёРµ РІ РјР°СЃСЃРёРІРµ: " << min << endl;
+	cout << "РњР°РєСЃРёРјР°Р»СЊРЅРѕРµ Р·РЅР°С‡РµРЅРёРµ РІ РјР°СЃСЃРёРІРµ: " << max << endl;
 }
 void Shift(int arr[], const int n)
 {
 	int number_of_shifts;
-	cout << "Введите количество сдвигов влево: "; cin >> number_of_shifts;
-	char direction; // Направление сдвига
-	cout << "Выберите направление (l-left, r-right): "; cin >> direction;
+	cout << "Р’РІРµРґРёС‚Рµ РєРѕР»РёС‡РµСЃС‚РІРѕ СЃРґРІРёРіРѕРІ РІР»РµРІРѕ: "; cin >> number_of_shifts;
+	char direction; // РќР°РїСЂР°РІР»РµРЅРёРµ СЃРґРІРёРіР°
+	cout << "Р’С‹Р±РµСЂРёС‚Рµ РЅР°РїСЂР°РІР»РµРЅРёРµ (l-left, r-right): "; cin >> direction;
 	if (direction == 'r')number_of_shifts = n - number_of_shifts;
 	for (int i = 0; i < number_of_shifts; i++)
 	{
