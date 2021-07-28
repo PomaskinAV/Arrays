@@ -39,8 +39,7 @@ void main()
 	cout << "Минимальное значение элемента в массиве: " << min << endl;
 	cout << "Максимальное значение элемента в массиве: " << max << endl;
 	cout << endl;
-
-	for(int m=0; m<(ROWS*COLS-1); m++)
+	for (int m = 0; m < (ROWS * COLS - 1); m++)
 		for (int i = 0; i < ROWS; i++)
 		{
 			for (int j = 0; j < COLS; j++)
