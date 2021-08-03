@@ -1,17 +1,22 @@
 ﻿#include<iostream>
 using namespace std;
 
+const int ROWS = 3;
+const int COLS = 8;
+
 void FillRand(int arr[], const int n);
 void FillRand(double arr[], const int n);
 void FillRand(short arr[], const int n);
 void FillRand(float arr[], const int n);
 void FillRand(char arr[], const int n);
+void FillRand(int arr[ROWS][COLS], const int ROWS, const int COLS);
 
 void Print(int arr[], const int n);
 void Print(double arr[], const int n);
 void Print(short arr[], const int n);
 void Print(float arr[], const int n);
 void Print(char arr[], const int n);
+void Print(int arr[ROWS][COLS], const int ROWS, const int COLS);
 
 void Sort(int arr[], const int n);
 void Sort(double arr[], const int n);
@@ -45,9 +50,12 @@ int MaxValueIn(char arr[], const int n);
 
 //void Shift(int arr[], const int n);
 
+//#define HOME_WORK
+
 void main()
 {
 	setlocale(LC_ALL, "");
+#ifdef HOME_WORK
 	const int n = 5;
 	int arr[n];
 	FillRand(arr, n);
@@ -117,6 +125,11 @@ void main()
 	cout << "Максимальное значение в массиве: " << MaxValueIn(err, e_size) << endl;
 
 	cout << endl;
+#endif // HOME_WORK
+
+	int i_arr_2[ROWS][COLS];
+	FillRand(i_arr_2, ROWS, COLS);
+	Print(i_arr_2, ROWS, COLS);
 }
 
 void FillRand(int arr[], const int n)
@@ -152,6 +165,16 @@ void FillRand(char arr[], const int n)
 	for (int i = 0; i < n; i++)
 	{
 		arr[i] = rand() % 100;
+	}
+}
+void FillRand(int arr[ROWS][COLS], const int ROWS, const int COLS)
+{
+	for (int i = 0; i < ROWS; i++)
+	{
+		for (int j = 0; j < COLS; j++)
+		{
+			arr[i][j] = rand() % 100;
+		}
 	}
 }
 
@@ -194,6 +217,17 @@ void Print(char arr[], const int n)
 		cout << (int)arr[i] << "\t";
 	}
 	cout << endl;
+}
+void Print(int arr[ROWS][COLS], const int ROWS, const int COLS)
+{
+	for (int i = 0; i < ROWS; i++)
+	{
+		for (int j = 0; j < COLS; j++)
+		{
+			cout << arr[i][j] << "\t";
+		}
+		cout << endl;
+	}
 }
 
 void Sort(int arr[], const int n)
