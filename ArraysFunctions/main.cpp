@@ -220,7 +220,7 @@ void Sort(T arr[], const int n)
 template<typename T>
 T Sum(T arr[], const int n)
 {
-	int summ = 0;
+	T summ = 0;
 	for (int i = 0; i < n; i++)
 	{
 		summ += arr[i];
@@ -237,7 +237,7 @@ double Avg(T arr[], const int n)
 template<typename T>
 T MinValueIn(T arr[], const int n)
 {
-	int min = arr[0];
+	T min = arr[0];
 	for (int i = 0; i < n; i++)
 	{
 		if (arr[i] < min) min = arr[i];
@@ -248,7 +248,7 @@ T MinValueIn(T arr[], const int n)
 template<typename T>
 T MaxValueIn(T arr[], const int n)
 {
-	int max = arr[0];
+	T max = arr[0];
 	for (int i = 0; i < n; i++)
 	{
 		if (arr[i] > max) max = arr[i];
