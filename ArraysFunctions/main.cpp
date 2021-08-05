@@ -3,15 +3,15 @@
 #include"Print.h"
 #include"Sort.h"
 #include"Statistics.h"
+#include"Shift.h"
 
-//void Shift(int arr[], const int n);
-
-#define HOME_WORK
+//#define HOME_WORK
 
 void main()
 {
 	setlocale(LC_ALL, "");
 #ifdef HOME_WORK
+	cout << "Int: " << endl;
 	const int n = 5;
 	int arr[n];
 	FillRand(arr, n);
@@ -22,12 +22,12 @@ void main()
 	cout << "Среднее арифметическое элементов массива: " << Avg(arr, n) << endl;
 	cout << "Минимальное значение в массиве: " << MinValueIn(arr, n) << endl;
 	cout << "Максимальное значение в массиве: " << MaxValueIn(arr, n) << endl;
-	/*Shift(arr, n);
-	Print(arr, n);*/
+	Shift(arr, n);
+	Print(arr, n);
 
 	cout << endl;
 
-	///////////////////////////
+	cout << "Double: " << endl;
 	const int b_size = 8;
 	double brr[b_size];
 	FillRand(brr, b_size);
@@ -43,6 +43,7 @@ void main()
 
 	cout << endl;
 
+	cout << "Short: " << endl;
 	const int c_size = 8;
 	short crr[c_size];
 	FillRand(crr, c_size);
@@ -56,6 +57,7 @@ void main()
 
 	cout << endl;
 
+	cout << "Float: " << endl;
 	const int d_size = 8;
 	float drr[d_size];
 	FillRand(drr, d_size);
@@ -69,6 +71,7 @@ void main()
 
 	cout << endl;
 
+	cout << "Char: " << endl;
 	const int e_size = 8;
 	char err[e_size];
 	FillRand(err, e_size);
@@ -83,25 +86,68 @@ void main()
 	cout << endl;
 #endif // HOME_WORK
 
+	cout << "Int:" << endl;
 	int i_arr_2[ROWS][COLS];
 	FillRand(i_arr_2, ROWS, COLS);
 	Print(i_arr_2, ROWS, COLS);
-}
+	Sort(i_arr_2, ROWS, COLS);
+	cout << endl;
+	Print(i_arr_2, ROWS, COLS);
+	cout << "Сумма всех элементов в массиве: " << Sum(i_arr_2, ROWS, COLS) << endl;
+	cout << "Среднее арифметическое элементов массива: " << Avg(i_arr_2, ROWS, COLS) << endl;
+	cout << "Минимальное значение в массиве: " << MinValueIn(i_arr_2, ROWS, COLS) << endl;
+	cout << "Максимальное значение в массиве: " << MaxValueIn(i_arr_2, ROWS, COLS) << endl;
+	cout << endl;
 
-void Shift(int arr[], const int n)
-{
-	int number_of_shifts;
-	cout << "Введите количество сдвигов влево: "; cin >> number_of_shifts;
-	char direction; // Направление сдвига
-	cout << "Выберите направление (l-left, r-right): "; cin >> direction;
-	if (direction == 'r')number_of_shifts = n - number_of_shifts;
-	for (int i = 0; i < number_of_shifts; i++)
-	{
-		int buffer = arr[0];
-		for (int i = 0; i < n; i++)
-		{
-			arr[i] = arr[i + 1];
-		}
-		arr[n - 1] = buffer;
-	}
+	cout << "Double:" << endl;
+	double i_arr_3[ROWS][COLS];
+	FillRand(i_arr_3, ROWS, COLS);
+	Print(i_arr_3, ROWS, COLS);
+	Sort(i_arr_3, ROWS, COLS);
+	cout << endl;
+	Print(i_arr_3, ROWS, COLS);
+	cout << "Сумма всех элементов в массиве: " << Sum(i_arr_3, ROWS, COLS) << endl;
+	cout << "Среднее арифметическое элементов массива: " << Avg(i_arr_3, ROWS, COLS) << endl;
+	cout << "Минимальное значение в массиве: " << MinValueIn(i_arr_3, ROWS, COLS) << endl;
+	cout << "Максимальное значение в массиве: " << MaxValueIn(i_arr_3, ROWS, COLS) << endl;
+	cout << endl;
+
+	cout << "Short:" << endl;
+	short i_arr_4[ROWS][COLS];
+	FillRand(i_arr_4, ROWS, COLS);
+	Print(i_arr_4, ROWS, COLS);
+	Sort(i_arr_4, ROWS, COLS);
+	cout << endl;
+	Print(i_arr_4, ROWS, COLS);
+	cout << "Сумма всех элементов в массиве: " << Sum(i_arr_4, ROWS, COLS) << endl;
+	cout << "Среднее арифметическое элементов массива: " << Avg(i_arr_4, ROWS, COLS) << endl;
+	cout << "Минимальное значение в массиве: " << MinValueIn(i_arr_4, ROWS, COLS) << endl;
+	cout << "Максимальное значение в массиве: " << MaxValueIn(i_arr_4, ROWS, COLS) << endl;
+	cout << endl;
+
+	cout << "Float:" << endl;
+	float i_arr_5[ROWS][COLS];
+	FillRand(i_arr_5, ROWS, COLS);
+	Print(i_arr_5, ROWS, COLS);
+	Sort(i_arr_5, ROWS, COLS);
+	cout << endl;
+	Print(i_arr_5, ROWS, COLS);
+	cout << "Сумма всех элементов в массиве: " << Sum(i_arr_5, ROWS, COLS) << endl;
+	cout << "Среднее арифметическое элементов массива: " << Avg(i_arr_5, ROWS, COLS) << endl;
+	cout << "Минимальное значение в массиве: " << MinValueIn(i_arr_5, ROWS, COLS) << endl;
+	cout << "Максимальное значение в массиве: " << MaxValueIn(i_arr_5, ROWS, COLS) << endl;
+	cout << endl;
+
+	cout << "Char:" << endl;
+	char i_arr_6[ROWS][COLS];
+	FillRand(i_arr_6, ROWS, COLS);
+	Print(i_arr_6, ROWS, COLS);
+	Sort(i_arr_6, ROWS, COLS);
+	cout << endl;
+	Print(i_arr_6, ROWS, COLS);
+	cout << "Сумма всех элементов в массиве: " << Sum(i_arr_6, ROWS, COLS) << endl;
+	cout << "Среднее арифметическое элементов массива: " << Avg(i_arr_6, ROWS, COLS) << endl;
+	cout << "Минимальное значение в массиве: " << MinValueIn(i_arr_6, ROWS, COLS) << endl;
+	cout << "Максимальное значение в массиве: " << MaxValueIn(i_arr_6, ROWS, COLS) << endl;
+	cout << endl;
 }
